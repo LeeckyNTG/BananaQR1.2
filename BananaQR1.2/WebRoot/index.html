@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>香蕉二维码生成器</title>
+    <link rel="stylesheet" href="css/mob.css" />
+    <script type="text/javascript" src="js/mob.js" ></script>
+    <script language="JavaScript" src="js/jquery.js"></script>
+    <script type="text/javascript">
+    	
+		function createQR(){
+		
+			var content =$("#content_input_textarea").attr("value");
+			
+			$.post("createqr/getQr.action",{requestData:content},function(data,status){
+				if(data!=null){
+					
+				}else{
+				}
+		
+			},"json");
+			
+			alert(content);
+			
+			//window.location.href="QRshow.html"; 
+		}
+    	
+    </script>
+</head>
+<body>
+		<div id="head">
+			<div id="head_content">		
+				<img src="img/favicon.ico" />
+				<font face="楷体" color="aliceblue">香蕉二维码</font>
+			</div>	
+		</div>
+		<div id="menu">
+			<div id="menu_left" onclick="wenben()">
+				<div id="menu_left_content">
+				<font face="楷体">文本</font>
+				</div>
+				<div id="menu_left_hr"><hr  width=80% size=3 color=#000 style="filter:progid:DXImageTransform.Microsoft.Shadow(color#5151A2,direction:145,strength:15)"></div>
+				
+			</div>
+			
+			<div id="menu_right" onclick="wangzhi()">
+				<font face="楷体">网址</font>
+				<div id="menu_right_hr"></div>
+			</div>
+		</div>
+		<br/><br/>
+		<div id="content_input">
+			
+			<textarea id="content_input_textarea" style="width:98%; height:100%; border:solid 2px #F5F5F5"  placeholder="请输入文字内容"></textarea>
+			
+		</div>
+		
+		<div class="submit"><button id="button" onclick="createQR()">生成二维码</button></div>
+		
+</html>

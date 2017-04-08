@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>香蕉二维码生成器</title>
+    <link rel="stylesheet" href="css/mob.css" />
+    <script type="text/javascript" src="js/mob.js" ></script>
+    <script type="text/javascript" src="demo/jquery/jquery-1.9.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/iColor-min.css" />
+	<script type="text/javascript" src="js/iColor-min.js"></script>
+	<script type="text/javascript" src="demo/demo.js"></script>
+	</head>
+	<body>
+		<div id="head">
+			
+			<div id="head_content">
+			
+				<img src="img/favicon.ico" />
+				<font face="楷体" color="aliceblue">香蕉二维码</font>
+			</div>
+			
+			
+		</div>
+		<div id="imgShow">
+			
+			<img id="img" src="img/1474964788.png" />
+			 
+		</div>
+		
+		<div id="menu">
+			<div id="menu_left" onclick="logoCheck()">
+				<div id="menu_left_content">
+				<font face="楷体">LOGO</font>
+				</div>
+				<div id="menu_left_hr"><hr width=80% size=3 color=#000 style="filter:progid:DXImageTransform.Microsoft.Shadow(color#5151A2,direction:145,strength:15)"></div>
+				
+			</div>
+			
+			<div id="menu_right" onclick="colorCheck()">
+				<font face="楷体">颜色</font>
+				<div id="menu_right_hr"></div>
+			</div>
+		</div>
+		
+		<div id="QR_menu_LOGO" style="display:block;padding-top: 50px;">
+			<div id="QR_menu_left" align="center">
+				<span class="btn btn-success fileinput-button">  
+	            	<button id="button_logo">上传LOGO</button>
+	            <input type="file">  
+	        	</span>  
+        	</div>
+        	<div id="QR_menu_right" align="center">
+				<span class="btn btn-success fileinput-button">  
+	            	<button id="button_logo">常用LOGO</button>
+	            <input type="file">  
+	        	</span>  
+        	</div>
+		</div>
+		<div id="QR_menu_color" style="display:none;padding-top: 50px;">
+			<div style="margin: 10px;text-align: center;">
+				<div id="mycolor2" style="width: 100%;height: 30px; line-height: 24px" hx="#ff0"></div>
+			
+			</div>		
+			<font style="padding-left: 10px;" size="2" color="red">提示：点击有色区域进行选色！</font>
+		</div>
+	</body>
+</html>
